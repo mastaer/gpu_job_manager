@@ -1,0 +1,44 @@
+#!/bin/bash
+
+while true; do
+    # Lese nächsten Prozess
+    cd ../newjobs
+    file=`ls | sort -n | head -1`
+    if [ "$file" = "" ];then
+        cd ../scripts
+        sleep 5
+    else
+        mv $file ../runningjob/
+        cd ../runningjob/
+        timeBeforeExit=`sed -n '1p' $file` # Erste Zeile wie lange der Prozess laufen soll
+        data=`sed -n '2p' $file` # der eigentliche befehl
+        cd ../scripts
+
+
+        # start programm
+        eval $data
+
+        echo "# Datei $file wird verarbeitet mit max. $timeBeforeExit Minuten: $data"
+
+        # waiting for end of time or that the process is finished
+        for i in `seq 1 $timeBeforeExit`;
+        do
+            if kill -0 $!; then # Is still running
+                sleep 60
+                if [ "$i" = "$timeBeforeExit" ]; then # Max waiting time is over
+                    kill $!
+                    echo '# Prozess wurde aus zeitlichen Gründen beendet.'
+                    cp -r ../runningjob/ ../timecanceled
+                    rm -r ../runningjob/
+                    mkdir ../runningjob/
+                fi
+            else
+                echo '# Prozess hat sich selbst beendet.'
+                cp -r ../runningjob/ ../finished
+                rm -r ../runningjob/
+                mkdir ../runningjob/
+                break
+            fi
+        done
+    fi
+done

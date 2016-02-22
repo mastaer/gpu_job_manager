@@ -1,0 +1,7 @@
+60
+export PYTHONUNBUFFERED=1;THEANO_FLAGS=optimizer_including=cudnn,mode=FAST_RUN,device=gpu,floatX=float32 python main.py -lc 16 3 3 -pl 2 2 average_exc_pad -lc 32 3 3 -pl 2 2 average_exc_pad -lc 64 3 3 -pl 2 2 average_exc_pad -lr 10 -l 0.01 -n 10000 -i 32 -c 3 -m 5 >> output/___dataaugmentation_lc16_32_64_pool2_2_2_stride2_2_2_WithCudNN_pooling_average_exc_pad_m5 2>&1 &
+/home/jonas/Schreibtisch/ConvNeuNet_Python_SS15/trunk/theano_tut_conv_net_modified_for_cifar10/
+15. Sep 22:35:34
+16. Sep 03:16:31
+
+16. Sep 04:16:31

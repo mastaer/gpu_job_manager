@@ -1,0 +1,7 @@
+300
+export PYTHONUNBUFFERED=1;THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python main.py -flc 192 5 4 2 3 -flc 384 5 4 2 3 -flc 384 3 2 2 3 -hl 500 3 -lr 10 -l 0.01 -n 10000 -i 32 -c 3 >> output/___speedTest_flc192_384_384_ksize5_5_3_poolshape_4_4_2_stride_2_2_2_hl500_5hs 2>&1 &
+/home/jonas/Schreibtisch/ConvNeuNet_Python_SS15/trunk/theano_tut_conv_net_modified_for_cifar10/
+12. Sep 21:07:35
+12. Sep 21:08:37
+
+13. Sep 02:08:37

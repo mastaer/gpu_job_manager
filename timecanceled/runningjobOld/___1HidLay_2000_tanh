@@ -1,0 +1,7 @@
+30
+export PYTHONUNBUFFERED=1;THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python main.py -hl 2000 0 -lr 10 -l 0.01 -n 10000 -i 32 -c 3 >> output/___1HidLay_2000_tanh 2>&1 &
+/home/jonas/Schreibtisch/ConvNeuNet_Python_SS15/trunk/theano_tut_conv_net_modified_for_cifar10/
+2. Sep 09:39:46
+2. Sep 14:27:48
+
+2. Sep 14:57:48

@@ -1,0 +1,7 @@
+25
+export PYTHONUNBUFFERED=1;THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python main.py -flc 320 2 1 1 3 -flc 320 2 2 2 3 -flc 640 2 1 1 3 -flc 640 2 2 2 3 -flc 960 2 1 1 3 -flc 960 2 2 2 3 -hl 1280 3 -lr 10 -l 0.001 -n 10000 -i 32 -c 3 -b 200 >> output/___graham_6FLC_b200 2>&1 &
+/home/jonas/Schreibtisch/ConvNeuNet_Python_SS15/trunk/theano_tut_conv_net_modified_for_cifar10/
+9. Sep 02:05:06
+9. Sep 08:00:57
+
+9. Sep 08:25:57

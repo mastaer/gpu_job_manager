@@ -1,0 +1,7 @@
+240
+export PYTHONUNBUFFERED=1;THEANO_FLAGS=optimizer_including=cudnn,mode=FAST_RUN,device=gpu,floatX=float32 python main.py -lc 192 5 3 -pl 4 2 max -lc 384 3 3 -pl 4 2 max -lc 384 3 3 -pl 2 2 max -hl 500 3 -lr 10 -l 0.01 -n 10000 -i 32 -c 3 -m 1 -w 1 >> output/___besttest_192lc5_4mp2_384lc3_4mp2_384lc5_2mp2_hl500 2>&1 &
+/home/jonas/Schreibtisch/ConvNeuNet_Python_SS15/trunk/theano_tut_conv_net_modified_for_cifar10/
+17. Sep 19:34:50
+17. Sep 19:34:53
+
+17. Sep 23:34:54

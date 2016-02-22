@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cd /home/jonas/Schreibtisch/jobs_manager/scripts
+
+cd ../newjobs
+
+allminuts=0
+for f in *; do
+    if [ "$f" != "*" ];then
+        param=`sed -n '1p' $f`
+        allminuts=$(( $allminuts + $param ))
+    fi
+done
+NEW_expration_DATE=$(date -d "+$allminuts minutes")
+# echo "sum of the minutes of the new jobs " $allminuts "; all job can run until "$NEW_expration_DATE
+echo "  " $allminuts " minutes for new jobs; server is expected to run until " $NEW_expration_DATE

@@ -1,0 +1,7 @@
+90
+export PYTHONUNBUFFERED=1;THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python main.py -lc 16 3 3 -pl 2 1 max -lc 32 3 3 -pl 2 1 max -lc 64 3 3 -pl 2 1 max -lr 10 -l 0.01 -n 10000 -i 32 -c 3 >> output/___speedTest_lc16_32_64_pool2_2_2_stride1_1_1 2>&1 &
+/home/jonas/Schreibtisch/ConvNeuNet_Python_SS15/trunk/theano_tut_conv_net_modified_for_cifar10/
+8. Sep 19:16:39
+8. Sep 19:16:56
+
+8. Sep 20:46:56

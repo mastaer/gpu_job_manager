@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cd /home/jonas/Schreibtisch/jobs_manager/scripts
+
+cd ../newjobs
+
+for f in *; do
+    allminuts=0
+    if [ "$f" != "*" ];then
+        param=`sed -n '1p' $f`
+        allminuts=`allminuts + param`
+    fi
+done

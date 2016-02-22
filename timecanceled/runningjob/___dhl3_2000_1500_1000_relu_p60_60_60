@@ -1,0 +1,7 @@
+180
+export PYTHONUNBUFFERED=1;THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python main.py -dhl 2000 3 0.60 -dhl 1500 3 0.60 -dhl 1000 3 0.60 -lr 10 -l 0.01 -n 10000 -i 32 -c 3 >> output/___dhl3_2000_1500_1000_relu_p60_60_60 2>&1 &
+/home/jonas/Schreibtisch/ConvNeuNet_Python_SS15/trunk/theano_tut_conv_net_modified_for_cifar10/
+10. Sep 08:48:02
+11. Sep 02:50:16
+
+11. Sep 05:50:16

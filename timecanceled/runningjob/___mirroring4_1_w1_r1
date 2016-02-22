@@ -1,0 +1,5 @@
+360
+export PYTHONUNBUFFERED=1;THEANO_FLAGS=optimizer_including=cudnn,mode=FAST_RUN,device=gpu,floatX=float32 python main.py -dlc 16 5 3 0.6 -pl 4 2 max -dlc 32 3 3 0.6 -pl 4 2 max -dlc 64 3 3 0.6 -dhl 128 3 0.6 -lr 10 -l 0.01 -n 10000 -i 32 -c 3 -m 1 -w 1 -r 1 >> output/___mirroring4_1_w1_r1 2>&1 &
+/home/jonas/Schreibtisch/ConvNeuNet_Python_SS15/trunk/theano_tut_conv_net_modified_for_cifar10/
+24. Sep 11:56:07
+24. Sep 14:55:23

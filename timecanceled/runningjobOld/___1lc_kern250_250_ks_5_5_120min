@@ -1,0 +1,7 @@
+120
+export PYTHONUNBUFFERED=1;THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python main.py -lc 250 5 3 -lc 250 5 3 -lr 10 -l 0.01 -n 10000 -i 32 -c 3 >> output/___1lc_kern250_250_ks_5_5_120min 2>&1 &
+/home/jonas/Schreibtisch/ConvNeuNet_Python_SS15/trunk/theano_tut_conv_net_modified_for_cifar10/
+8. Sep 08:06:32
+8. Sep 10:05:55
+
+8. Sep 12:05:55
